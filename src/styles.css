@@ -1,0 +1,464 @@
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.primary-text {
+  color: #be9b57 !important;
+}
+
+.secondary-text {
+  color: #687188 !important;
+}
+
+.dark-text {
+  color: #292b2c !important;
+}
+
+.success-text {
+  color: #388e3c !important;
+}
+
+.warning-text {
+  color: #ff9f00 !important;
+}
+
+.white-text {
+  color: #ffffff !important;
+}
+
+.bg-primary {
+  background-color: #be9b57 !important;
+}
+
+.bg-secondary {
+  background-color: #687188 !important;
+}
+
+.bg-dark {
+  background-color: #292b2c !important;
+}
+
+.bg-pure-dark {
+  background-color: #202325;
+}
+
+.bg-success {
+  background-color: #388e3c !important;
+}
+
+.bg-warning {
+  background-color: #ff9f00 !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.bg-light-blue {
+  background-color: #f4f9fc !important;
+}
+
+.bg-redon {
+  background-color: #fff1f1 !important;
+}
+
+.bg-gray {
+  background-color: #f7f8fb !important;
+}
+
+.font-12 {
+  font-size: 0.75rem;
+}
+
+.font-14 {
+  font-size: 0.875rem;
+}
+
+.font-16 {
+  font-size: 1rem;
+}
+
+.font-18 {
+  font-size: 1.125rem;
+}
+
+.font-20 {
+  font-size: 1.25rem;
+}
+
+.font-22 {
+  font-size: 1.375rem;
+}
+
+.font-24 {
+  font-size: 1.5rem;
+}
+
+.font-28 {
+  font-size: 1.75rem;
+}
+
+.font-30 {
+  font-size: 1.875rem;
+}
+
+.font-32 {
+  font-size: 2rem;
+}
+
+.font-40 {
+  font-size: 2.50rem;
+}
+
+.font-60 {
+  font-size: 3.75rem;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.link-hover:hover {
+  color: #be9b57 !important;
+  z-index: 9;
+}
+
+.hover-btn:hover {
+  color: #ffffff !important;
+  background: #be9b57 !important;
+}
+
+.form-focus:focus {
+  border-color: #be9b57;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 50, 77, 0.4);
+          box-shadow: 0 0 0 0.2rem rgba(255, 50, 77, 0.4);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hj-pagination li .active {
+  background-color: #be9b57 !important;
+  color: #ffffff !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.active {
+  color: #be9b57 !important;
+}
+
+.curency-d,
+.lan-d {
+  width: 16%;
+}
+
+.curency-d:focus,
+.lan-d:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.focus-none:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.hj-primary-btn {
+  color: #ffffff;
+  background: #be9b57;
+  padding: 12px 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+}
+
+.hj-primary-btn:hover {
+  background: #be933f;
+  color: #ffffff;
+}
+
+.hj-dark-btn {
+  outline: 0;
+  border: 0;
+  color: #ffffff;
+  background: #292b2c;
+  padding: 12px 35px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  z-index: 9;
+  border-right: 2px solid #ffffff;
+}
+
+.hj-dark-btn:hover {
+  background-color: #202325;
+}
+
+.hj-breadcrumb {
+  padding: 70px 0;
+}
+
+.hj-breadcrumb .active {
+  color: #6c757d !important;
+}
+
+.hj-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+  border-bottom: 1px solid #ddd;
+}
+
+.hj-slider-section .hj-slider-item {
+  min-height: 32rem;
+  background: #777;
+  color: #fff;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hj-slider-section .carousel-control-prev,
+.hj-slider-section .carousel-control-next {
+  opacity: 0;
+}
+
+.hj-slider-section .carousel-control-next:hover,
+.hj-slider-section .carousel-control-prev:hover {
+  opacity: 1;
+}
+
+.hj-slider-section .carousel-caption {
+  top: 50%;
+  left: 15%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hj-slider-section h1 {
+  -webkit-animation: show-left-to-right 1s;
+          animation: show-left-to-right 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.hj-slider-section h2 {
+  -webkit-animation: show-left-to-right 1s;
+          animation: show-left-to-right 1s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.hj-slider-section .hj-primary-btn {
+  -webkit-animation: show-left-to-right 1.5s;
+          animation: show-left-to-right 1.5s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  bottom: 0;
+  -webkit-transform: translateX(-300%);
+          transform: translateX(-300%);
+}
+
+@-webkit-keyframes show-left-to-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: .4;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show-left-to-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: .4;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hj-shop-banner-section .hj-banner-info {
+  top: 50%;
+  right: 0;
+  padding: 20px;
+  width: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hj-product-action-btn {
+  opacity: 0;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.hj-product-card:hover .hj-product-action-btn {
+  display: block !important;
+  opacity: 1;
+}
+
+.hj-product-card:hover .hj-product-img img {
+  opacity: 0.8;
+}
+
+.hj-product-badge {
+  top: 10px;
+  left: 10px;
+  z-index: 9;
+}
+
+.hj-exclusive-product-section .mixitup-control-active {
+  color: #be9b57 !important;
+}
+
+.hj-tranding-banner-section .md-divider {
+  height: 50px;
+}
+
+.hj-tranding-banner-section .tranding-img {
+  margin-top: -90px;
+}
+
+.hj-feature-product-section .owl-prev {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hj-feature-product-section .owl-next {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hj-newsletter-section .newsletter-input {
+  width: 70%;
+  border-color: #be9b57;
+  border-right: none;
+}
+
+.hj-newsletter-section .newsletter-btn {
+  width: 30%;
+  border-right: 2px solid #ffffff !important;
+  border-color: #292b2c;
+}
+
+.hj-newsletter-section .form-control-lg {
+  padding: .7rem 1rem !important;
+}
+
+.hj-footer .hj-footer-widgets .hj-footer-description {
+  width: 80%;
+}
+
+.hj-footer .hj-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hj-contact-info-section .hj-address-icon {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  padding: 20px;
+  line-height: 24px;
+  border: 2px solid #be9b57;
+  font-size: 38px;
+  -webkit-transition: background-color .5s ease-in;
+  transition: background-color .5s ease-in;
+}
+
+.hj-contact-info-section .hj-address-info-box:hover .hj-address-icon {
+  background: #be9b57;
+  color: #ffffff !important;
+}
+
+.hj-faq-section .accordion-button:not(.collapsed) {
+  color: #292b2c !important;
+  background-color: transparent !important;
+}
+
+.hj-filter .active {
+  background: #be9b57;
+  color: #ffffff !important;
+}
+
+/* -------------------------------------------------
+  max-width: 768px
+---------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+  .hj-tranding-banner-section .hj-tranding-banner-info h2 {
+    font-size: 1.875rem;
+  }
+  .hj-newsletter-section h2 {
+    font-size: 1.75rem;
+  }
+  .hj-newsletter-section .newsletter-input {
+    width: 65%;
+  }
+  .hj-newsletter-section .newsletter-btn {
+    width: 35%;
+  }
+}
+
+/* -------------------------------------------------
+  max-width: 480px
+---------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+  .hj-tranding-banner-section .tranding-img {
+    margin-top: 30px;
+  }
+  .hj-testimonial-section .carousel-item p {
+    width: 90% !important;
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

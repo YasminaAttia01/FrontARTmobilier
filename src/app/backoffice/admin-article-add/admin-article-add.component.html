@@ -1,0 +1,98 @@
+<!-- Start Page Breadcrumb -->
+<section class="hj-breadcrumb bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="font-28 font-roboto fw-bold mb-0">Administration</h3>
+        </div>
+        <div class="col-md-6">
+          <nav class="float-md-end mt-lg-0 mt-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="text-decoration-none link-hover dark-text font-14 font-poppins" [routerLink]="'/admin/dashboard'">Adminnistration</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+</section>
+    <!-- End Page Breadcrumb -->
+
+<!-- Start Dashboard -->
+<section class="hj-faq-section mx-2 my-5">
+    <div class="container-fluid">
+        <div class="row gy-5">
+            <div class="col-lg-3">
+                <app-navbar></app-navbar>
+            </div>
+            <div class="col-lg-9">
+                <div class="row gy-4">
+                    <div class="col-12">
+                        <div class="contact-form">
+                            <h3 class="font-20 dark-text">Ajouter un article</h3>
+                            <form [formGroup]="articleForm" (ngSubmit)="onSubmit()" novalidate>
+                              <div class="row gy-4">
+                                <div class="col-lg-6">
+                                  <label for="name" class="mb-2">Nom</label>
+                                  <input formControlName="name" type="text" id="name" class="form-control form-control-lg font-16" 
+                                  [ngClass]="{'is-invalid': submitted && articleForm.controls['name'].hasError }"/>
+                                  <div *ngIf="submitted && articleForm.controls['name'].hasError('required')" class="invalid-feedback">
+                                    Le nom est obligatoire
+                                  </div>
+                                </div>
+                                <div class="col-lg-6">
+                                  <label for="username" class="mb-2">Prix</label>
+                                  <input formControlName="prix" type="text" id="prix" class="form-control form-control-lg font-16"
+                                  [ngClass]="{'is-invalid': submitted && articleForm.controls['prix'].hasError }" />
+                                  <div *ngIf="submitted && articleForm.controls['prix'].hasError('required')" class="invalid-feedback">
+                                    Le prix est obligatoire
+                                  </div>
+                                  <div *ngIf="submitted && articleForm.controls['prix'].hasError('pattern')" class="invalid-feedback">
+                                    Le prix est un entier
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <label for="description" class="mb-2">Description</label>
+                                  <textarea formControlName="description" id="description" rows="4" class="form-control form-control-lg font-16"
+                                  [ngClass]="{'is-invalid': submitted && articleForm.controls['description'].hasError }">
+                                  </textarea>
+                                  <div *ngIf="submitted && articleForm.controls['description'].hasError('required')" class="invalid-feedback">
+                                    La description est obligatoire
+                                  </div>
+                                </div>
+                                <div class="col-lg-6">
+                                  <label for="image" class="mb-2">Image</label>
+                                  <input formControlName="image" type="text" id="image" class="form-control form-control-lg font-16" 
+                                  [ngClass]="{'is-invalid': submitted && articleForm.controls['image'].hasError }"/>
+                                  <div *ngIf="submitted && articleForm.controls['image'].hasError('required')" class="invalid-feedback">
+                                    L' image est obligatoire
+                                  </div>
+                                </div>
+                                <div class="col-lg-6">
+                                  <label for="categorie" class="mb-2">Categorie</label>
+                                  <select formControlName="categorie" id="categorie" class="form-control form-control-lg font-16"
+                                  [ngClass]="{'is-invalid': submitted && articleForm.controls['categorie'].hasError }">
+                                        <option *ngFor="let categorie of categories" [value]="categorie._id" >
+                                          {{ categorie.name }}
+                                        </option>
+                                  </select>
+                                  <div *ngIf="submitted && articleForm.controls['categorie'].hasError('required')" class="invalid-feedback">
+                                    La categorie est obligatoire
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <button class="hj-primary-btn mt-4 me-4 border-0">
+                                    Enregistrer
+                                    <span *ngIf="loadingSubmit" class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>
+                                  </button>
+                                  <button type="reset" (click)="onReset()"  class="hj-primary-btn bg-secondary mt-4 border-0">Annuler</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Dashboard -->

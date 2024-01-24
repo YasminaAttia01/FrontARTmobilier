@@ -1,0 +1,89 @@
+<!-- Start Page Breadcrumb -->
+<section class="hj-breadcrumb bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="font-28 font-roboto fw-bold mb-0">Administration</h3>
+        </div>
+        <div class="col-md-6">
+          <nav class="float-md-end mt-lg-0 mt-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="text-decoration-none link-hover dark-text font-14 font-poppins" [routerLink]="'/admin/dashboard'">Adminnistration</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+</section>
+    <!-- End Page Breadcrumb -->
+
+<!-- Start Dashboard -->
+<section class="hj-faq-section mx-2 my-5">
+    <div class="container-fluid">
+        <div class="row gy-5">
+            <div class="col-lg-3">
+                <app-navbar></app-navbar>
+            </div>
+            <div class="col-lg-9">
+                <div class="row gy-4">
+                    <div class="col-12">
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <button [routerLink]="'/admin/categorie/ajouter'" class="hj-primary-btn border-0">
+                                    Ajouter
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control form-control-lg font-16" placeholder="Rechercher" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-borderless text-center">
+                                <thead class="table-dark">
+                                    <tr class="border-bottom ">
+                                        <th class="text-start ps-3">Nom</th>
+                                        <th class="text-end pe-3">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let categorie of categories"  class="align-middle">
+                                        <td class="text-start ps-3">
+                                            <span class="fs-bold">{{ categorie.name }}</span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <a [routerLink]="['/admin/categorie/modifier', categorie._id]" class="me-3 text-info">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                                                </svg>
+                                            </a> 
+                                            <a (click)="onDelete(categorie)"  class="text-danger" type="button">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                                                </svg>
+                                            </a> 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div *ngIf="categories.length == 0"  >
+                            <div class="alert alert-info shadow-sm text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                                    <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+                                    <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+                                </svg> 
+                                <div class="mt-2">
+                                    La liste des articles est vide
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Dashboard -->
